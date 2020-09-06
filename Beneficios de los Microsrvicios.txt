@@ -1,0 +1,12 @@
+- Escalabilidad
+- Resilencia
+- Agnóstico de la tecnología
+- Fácil despliegue
+- Alineamiento organizacional (Conway's Law)
+- Desarrollo basado en Componentes
+
+* Escalabilidad: Si algún dominio requiere cambios se puede hacer independiente
+* Resilencia: en caso de falla 
+* Agnóstico a la tecnología: Los servicios no son dependientes a la tecnología.
+* Fácil despliegue: No es necesario que todos los equipos estén en un pase, cada equipo es autónomo.
+* Alineamiento organizacional: 
