@@ -1,0 +1,24 @@
+En los procesos tradicionales de desarrollo de software, se creaba un solo gran artefacto deployable que contenía todos los flujos de negocio.
+
+* PROBLEMAS DEL MONOLITO
+
+- Innovación interrumpida: Acopla los ciclos de cambios de manera que las capacidades de negocio no pueden desplegarse de manera independiente, por lo que la velocidad de innovación se ve interrumpida.
+
+- Escalamiento: Los servicios que ofrecen una interfaz REST o SOAP, que se encuentran dentro del monolito, no pueden ser escalados de manera independiente.
+
+- Curva de aprendizaje: Tiempo de aprendizaje (Ramp up) usualmente los nuevos desarrolladores que entran al equipo deben aprender los dominios de negocio, eso les puede tomar de 3 a 6 meses.
+
+- Un solo Stack Tecnológico: Gran compromiso con los stacks tecnológicos ya que introducir un nuevo stack puede ser considerado algo riesgoso.
+
+- Nube: Las necesidades del monolito no se encuentran en la nube.
+	+ Acceso a unidades montadas o unidades compartidas.
+	+ Archivos de configuración en una ruta establecida.
+	+ Librerías compartidas.
+	+ Aplicaciones peer to peer en cluster.
+	
+* FRAGMENTAR MONOLITO
+- Empezar desacoplando cada capacidad de negocio.
+- Minimizar las dependencias de vuelta al Monolito.
+- Desacoplar verticalmente.
+- Desacoplar lo que es importante para el negocio y cambia frecuentemente.
+- Desacoplar la capacidad, NO el código.
