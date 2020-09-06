@@ -1,0 +1,12 @@
+Se ve dos tipos de componentes, de grano grueso y grano fino.
+
+Componentes de grano grueso: Componente grande, pesado q involucra varios flujos y su acoplamiento es alto.
+Componentes de grano fino: Es cohesivo, bajo acoplamiento.
+
+sprint de scrum -> 2 semanas aprox.
+
+número de integrantes: Jeff Bezos sugiere que deben poder ser alimentados por 2 pizzas grandes (16 piezas), es decir máx 8 integrantes.
+
+Regla de Richard Hackman: (n * n-1)/2 n=número de personas. Si el número de personas fueran 6 tendríamos 15 aristas de comunicación.
+Mientras mayor sea las aristas, la comunicación pierde calidad no se da de manera efectiva. Mientras más pequeño sea el equipo mejor es la comunicación.
+
