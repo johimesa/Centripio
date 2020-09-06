@@ -1,0 +1,11 @@
+
+Con el monolito teníamos:
+
+Grandes aplicaciones.
+Construcciones (builds) que toman mucho tiempo. (Slow builds)
+Despliegue infrecuente. Todos los equipos esperan hasta q se arregle si algo falla.
+
+
+*** Definición de Microservicio: Un pequeño servicio que es independiente , altamente cohesivo, con bajo acoplamiento, escalable, distribuido y fácil de desplegar, pero sobre todas las cosas hace una cosa y lo hace bien.
+
+
