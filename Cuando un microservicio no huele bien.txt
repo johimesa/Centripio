@@ -1,0 +1,15 @@
+
+4 síntomas:
+
+Tiene demasiadas responsabilidades, tiene alto acoplamiento.
+Tiene altamente dependiente de otros.
+Maneja demasiadas tablas de BD. El límite de tablas para un microservicio es 5.
+Que realice demasiadas operaciones CRUD.
+
+Un microservicio debe de tener una funcionalidad de negocio.
+
+
+Cuándo no debemos usar Microservicios.
+- Tipo de aplicación.
+- Transacciones y consistencia de datos.
+- Dispersión de servidores.
