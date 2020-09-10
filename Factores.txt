@@ -1,0 +1,75 @@
+Son 12 factores:
+
+- Código base
+- Dependencias
+- Configuraciones
+- Backing services
+- Construir, entregar y ejecutar
+- Procesos
+- Enlazamientos de puertos
+- Concurrencia
+- Desechabilidad
+- Paridad Dev / Prod
+- Logs
+- Procesos Administrativos
+
+* Código base:
+	+ Toda aplicación debe estar rastreado por un sistema de control de versiones (SCM)
+	+ Código base es cualquier repositorio o conjunto de repositorios que comparten un commit raiz.
+	
+* Dependencias:
+	+ Explícitamente declara y aísla dependencias
+	+ Evitar los paquetes de sitio (Site Package)
+	+ Declaración de dependencias
+	+ Aislamiento de dependencias
+	
+* Configuraciones:
+	+ Almacena las configuraciones dentro del ambiente
+	+ El archivo de configuración de la aplicación, "Alma de la aplicación" determina dónde será desplegado, usualmente son .properties, .yml, .xml
+	+ Nunca definir configuraciones como constantes en el código
+	+ Recomendable usar variables de ambiente, i.e ${USER_NAME}, ${JAVA_HOME}
+	
+* Backing services:
+	+ Trata a los servicios traseros como recursos incrustados
+	+ Es cualquier servicio que la aplicación consume a través de la red
+	+ Ejemplos: BD => MySql, Redis, MongoDB; Middleware => RabbitMQ
+	+ No es necesario cambiar código, solo archivo de configuración
+		
+* Construir, entregar y ejecutar: Separa estrictamente etapas de construcción y ejecución
+	+ Etapa de construcción (Build)
+	+ Etapa de liberación (Release)
+	+ Etapa de ejecución (Runtime)
+	
+* Procesos: 
+	+ Ejecuta la aplicación como uno o más procesos sin estado.
+	+ Procesos sin estado (Stateless)
+	+ No comparten datos
+	+ Ningún dato debe de estar en memoria, si se necesita persistirlo en base de datos.
+	
+* Enlazamiento de puertos: 
+	+ Exporta servicios basados en lanzamiento de puertos
+	+ No depende de otro servidor de aplicaciones o web service
+	+ La aplicación debe ser totalmente contenida ella misma
+	+ Usualmente el enlazamiento de puertos es usando HTTP
+	
+* Concurrencia:
+	+ Escala usando un modelo de procesos
+	+ Los procesos son ciudadanos de primera clase y necesitamos que estos puedan escalar de manera vertical (más procesamiento, más memoria) y de manera horizontal (más servidores q contengan nuestra aplicación)
+	+ En java, el JVM es un proceso de gran tamaño que reserva una gran cantidad de recursos al iniciar el sistema
+	+ En java, la concurrencia es manejada de manera interna
+	+ Escalar un proceso es fácil y práctico, ya que se puede determinar qué proceso recibe más carga
+
+* Desechabilidad: 
+	+ Maximiza la robustez con un rápido comienzo y un agradecido apagado.
+	+ Los procesos pueden ser empezados o parados en cualquier momento.
+	+ Comienzos cortos ayudan al proceso de escalabilidad y entrega.
+	+ Un apagado agradecido, silenciosamente deja de recibir más peticiones.
+	+ Los procesos deben ser robustos a una muerte abrupta.
+	
+* Paridad Dev / Prod: 
+	+ 
+	
+	
+	
+	
+	
