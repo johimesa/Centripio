@@ -67,7 +67,28 @@ Son 12 factores:
 	+ Los procesos deben ser robustos a una muerte abrupta.
 	
 * Paridad Dev / Prod: 
-	+ 
+	+ Mantén desarrollo, staging y producción similares a lo posible
+	+ La aplicación debe estar diseñada para despliegues continuos ("Continuos Deployment") manteniendo la brecha lo más pequeña posible.
+	+ Brecha del tiempo (escribe código que se despliegue rápido)
+	+ Brecha del personal (desarrolladores involucrados en el despliegue)
+	+ Brecha de las herramientas (mentén desarrollo y producción lo más similar posible)
+	
+* Logs:
+	+ Trata logs como flujo de eventos
+	+ Son eventos de agregación ordenados por tiempo
+	+ Su tiempo de vida está en relación a la aplicación
+	+ Ayuda a observar el comportamiento de la aplicación y también
+		Encontrar eventos del pasado
+		Entender tendencias (Peticiones por minuto)
+		Activar alertas para determinados rangos
+		
+* Procesos Administrativos: 
+	+ Ejecuta tareas de administración como procesos que se ejecutan una sola vez
+	+ Se pueden administrar todos los componentes de la aplicación, de manera que se vea como un solo proceso administrativo
+	+ Usualmente estos procesos administrativos son llamados JMX en Java.
+	+ Una sola interfaz de administración
+	
+
 	
 	
 	

@@ -1,0 +1,76 @@
+**** QUÉ ES SPRING BOOT
+
+Es un punto de partida para crear aplicaciones badas en Spring Framework, está diseñado para ejecutarse lo más rápido y con la mínima configuración posible.
+
+Ayuda a la creación de aplicaciones Stand alone con calidad de producción basados en Spring.
+
+Objetivos principales
+
+- Proveer una experiencia radical ampliamente accesible en todo el desarrollo de Spring.
+- Tener una opinión fuera de caja, y moverse rápido cuando los requerimientos empiezan de divergir.
+- Proveer un rango de características no funcionales que son comunes para grades clases de proyectos, como Servidores incrustados, seguridad, métricas, chequeos de salud y externalización de la configuración.
+- Absolutamente no generación de código o configuración de archivos XML.
+
+
+Características principales
+
+- Spring Boot Starters
+- Autoconfiguración
+- Interface de línea de comando con groovy
+- Actuator
+
+- Spring Boot Starters: Son un conjunto de dependencias que puedes incluir en el proyecto, en una sola parada, sin la necesidad que necesites incluir cada una de las dependencias de manera independiente.
+Usualmente estos son incluidos en archivos pom (Maven) o build (Gradle)
+
+- Autoconfiguración: Intenta de manera automática configurar la aplicación Spring basada en las dependencias que fueron agregadas.
+Permite al usuario no preocuparse por configurar recursos, estos serían algunos de los recursos que son automáticamente configurados por Spring Boot:
+	+ DispatcherServlet
+	+ Datasources
+	+ EntityManager
+	+ JSON Marshallers
+
+- Interface de línea de comando con groovy: Te permite desarrollar aplicaciones de Spring Boot utilizando el lenguaje groovy, y pueden ser hecho en modo script.
+Algunas características ofrecidas por Spring Boot CLI (Command Line Interface):
+	+ Automáticamente soporta groovy por lo q no hay necesidad de instalar algún SDK o framework.
+	+ Efectúa la resolución de dependencias de manera automática.
+	+ Provee una interface para ejecutar y probar aprobaciones hechas en Spring Boot, utilizando la línea de comandos.
+	+ Contiene un compilador de groovy y Manejador de dependencias Grape.
+	
+- Actuator: Ofrece una serie de funcionalidades que te permiten monitorear tu aplicación, una vez esta es lanzada a producción, dentro de las cosas que puedes auditar, son diferentes tipos de métricas, como de salud, conexiones, memoria disponible, entre otros.
+
+
+
+***** SPRING Framework
+
+Provee un modelo de programación y configuración comprensivo para aplicaciones Java empresariales modernas.
+El elemento principal de Spring es soporte de infraestrucura a nivel de aplicaciones, Spring se enfoca en las "tuberías o pipelines" de las aplicaciones empresariales, de modo que los equipos de desarrollo se enfoquen a desarrollar la lógica de negocio de la aplicación, sin necesidades que esta esté ligado a ambientes de despliegue en específico.
+
+Características de Spring Framework
+	+ Core technologies: Inyecciones de dependencias, eventos, recursos, i18n, validación, data binding, type conversion, SpEL, AOP.
+	+ Testing: mock objects, TestContext framework, Spring MVC test, WebTestClient.
+	+ Data Access: transacciones, soporte DAO, JDBC, ORM Marshaling XML.
+	+ Integration: remoting, JMS, JCA, JMX, email, tasks, scheduling, cache.
+	+ Languages: Kotlin, groovy, dynamic languages.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
