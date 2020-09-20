@@ -1,0 +1,37 @@
+
+- Se agrega la clase OrderController y se indica que es REST (@RestController)
+- Se crea un método GET (GetMapping) - findAll
+- Para habilitar lombok ir a Preferencias:
+	buscar annotation - check Enable annotation processing
+	buscar plugins - lombok
+- Se agrega el puerto y context-path en properties
+
+
+
+Algunas anotaciones importantes que vimos en este video.
+
+@GetMapping(value = "<URL Context>")
+
+Esta anotación representa al método HTTP GET.
+
+@PostMapping( value = "<URL Context>") 
+Esta anotación representa al método HTTP POST.
+
+@RestController
+Es una anotación a nivel de clase, que dice Spring Boot que es un servicio basado en REST y que serializará las peticiones, y proporcionará las respuestas en formato JSON.
+
+@PathVariable
+Esta anotación nos ayuda  a ligar el context pasado a en URL, a un parámetro de un método en Java.
+
+@RequestBody
+Esta anotación enlaza el cuerpo del petición HttpRequest a un objeto de transferencia DTO o de dominio, por lo que habilita la "des-serializacion"
+del cuerpo de la petición (HttpRequest) entrante a un objeto Java.
+
+@ResponseBody
+La Anotación le dice al controlador que el objeto retornado es automáticamente serializado a JSON, y se le pasa de regreso a la respuesta (HttpResponse).
+
+También charlamos sobre la clase ResponseEntity que representa una respuesta HTTP, por lo que puedes controlar las siguientes propiedades código de status, encabezados(headers), cuerpo (body).
+
+
+https://www.oscarblancarteblog.com/2018/11/30/data-transfer-object-dto-patron-diseno/
+https://www.oscarblancarteblog.com/2014/07/21/patron-de-diseno-modelo-vista-controlador-mvc/
