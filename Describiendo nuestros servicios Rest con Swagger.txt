@@ -1,0 +1,7 @@
+
+Se agrega la librería compile 'io.springfox:springfox-swagger2:2.9.2'
+
+Se crea una clase de configuración
+
+Para ver en formato html compile 'io.springfox:springfox-swagger-ui:2.9.2'
+
