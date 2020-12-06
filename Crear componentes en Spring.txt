@@ -1,0 +1,87 @@
+
+anotaciones para las clases.
+
+@Component, marca una clase Java como Bean, por lo tanto éste es tomado por el mecanismo de escaneo de componentes de Spring y lo integra al contexto de aplicación de Spring.
+
+@Service, es una especialización de Component, no provee ningún tipo de comportamiento adicional, pero es buena práctica denotar a las clases que representan a la capa de servicio ya que describe de mejor manera el intento.
+
+@Repository, también es una especialización de Component, pero además importa las clases de acceso a Base de Datos (DAO) dentro del contenedor de Spring, como parte de la mejora, hace que las excepciones no checadas "unchecked" lanzadas por lo métodos DAO que sea trasladadas a una excepción de tipo DataAccesException.
+
+@Controller, es una especialización de Component, pero esta es más usada en el contexto de Spring MVC.
+
+
+Ámbitos de componentes Spring
+
+	- Singleton: estamos diciendo q solo habrá una instancia dentro del contenedor de Spring, y este objeto estará en caché; cualquier cambio afectará a todas sus ref. Ámbito por default.
+	- Prototype: el contenedor de Spring siempre regresará una nueva instancia.
+	- Request: define un bean que vive durante la llamada de HTTP
+	- Session: define un bean que vive durante la sesión HTTP
+	- Application: define una instancia de un bean durante el ciclo de vida del ServletContext
+	- WebSocket: define una instancia de una bean durante la sesión del WebSocket, por lo que la misma instancia siempre es retornada cuando ésta sea accesada.
+
+Los últimos 4 son tocados totalmente en MVC.
+
+	-- Singleton: 
+		@Component
+		@Scope("singleton")
+		public class MyComponent {
+		}
+
+	-- Prototype:
+		@Component
+		@Scope("prototype")
+		public class MyComponent {
+		}
+		
+	-- Request:
+		@Component
+		@Scope(WebApplicationContext.SCOPE_REQUEST)
+		public class MyComponent implements Serializable {
+		}
+		
+		@Component
+		@RequestScope
+		public class MyComponent implements Serializable {
+		}
+		
+	-- Session:
+		@Component
+		@Scope(WebApplicationContext.SCOPE_SESSION, proxyMode = ScopedProxyMode.TARGET_CLASS)
+		public class MyComponent implements Serializable {
+		}
+		
+		@Component
+		@SessionScope
+		public class MyComponent implements Serializable {
+		}
+	
+	-- Application:
+		@Component
+		@Scope(WebApplicationContext.SCOPE_APPLICATION, proxyMode = ScopedProxyMode.TARGET_CLASS)
+		public class MyComponent implements Serializable {
+		}
+		
+		@Component
+		@ApplicationScope
+		public class MyComponent implements Serializable {
+		}
+	
+	-- WebSocket:
+		@Component
+		@Scope("websocket", proxyMode = ScopedProxyMode.TARGET_CLASS)
+		public class MyComponent implements Serializable {
+		}
+	
+	
+
+Se agrega compile 'org.modelmapper:modelmapper:2.3.2' para poder pasar el Order q es un objeto de entidad a un objeto de Transferencia OrderResponse y luego creamos la clase OrderServiceConfig.
+
+
+		
+		
+		
+		
+		
+		
+		
+		
